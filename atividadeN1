@@ -22,3 +22,37 @@ while systemRun == True:
 			print("Opção inválida!")
 		else:
 			break
+
+	#cadastra os usuarios
+	def cadastraUsuario():
+
+		print("Cadastro de usuário:")
+		print("-----------------------------")
+		nome = input("Nome: ")
+		email = input("E-mail: ")
+		cadastrados[nome] = {
+      "nome": nome,
+      "email": email
+    }
+
+		
+
+		print("Usuário Cadastrado com sucesso!")
+		print("")
+
+
+	#exibe os  usuarios
+	def exibeInscrito():
+		for nome, email in cadastrados.items():
+			print("Nome:",nome)
+			emailres = str(email["email"])
+			print("Email:",emailres)
+			print("")
+
+	#exibe em ordem alfabética
+	def exibeAlfab():
+		for nome, email in sorted(cadastrados.items()):
+			print("Nome:",nome)
+			emailres = str(email["email"])
+			print("Email:",emailres)
+			print("")
