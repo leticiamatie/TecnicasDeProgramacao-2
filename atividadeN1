@@ -1,0 +1,24 @@
+inscritos=[]
+cadastrados={}
+i=0
+
+menu = True
+opcao = 0
+systemRun = True
+
+while systemRun == True:
+	#menu
+	while menu == True:
+		print("Selecione uma opção:")
+		print("-----------------------------")
+		print("[1] - Cadastrar novo usuário")
+		print("[2] - Exibir usuários cadastrados")
+		print("[3] - Buscar usuário")
+		print("[4] - Remover usuário")
+		print("[5] - Alterar usuário")
+		opcao = int(input(""))
+		print("")
+		if opcao <1 or opcao>5:
+			print("Opção inválida!")
+		else:
+			break
