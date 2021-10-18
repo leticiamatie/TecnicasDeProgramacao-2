@@ -56,3 +56,35 @@ while systemRun == True:
 			emailres = str(email["email"])
 			print("Email:",emailres)
 			print("")
+
+	#encontra pelo nome
+	def encontraNome(procurado):
+		encontrado_nome= 0
+		for nome,email in cadastrados.items():
+			if procurado == nome:
+				encontrado_nome = nome
+				break
+		if encontrado_nome !=0:
+			print("Nome:",encontrado_nome)
+			emailres = str(email["email"])
+			print("Email:",emailres)
+			print("")
+			print("")
+		elif encontrado_nome == 0:
+			print("Esse usuário não esta inscrito")
+			print("")
+	
+	def deletaNome(procurado):
+		for nome,email in cadastrados.items():
+			emailres = str(email["email"])
+			encontrado_email = 0
+			if procurado == emailres:
+				encontrado_email = emailres
+				break
+		if encontrado_email != 0:
+			cadastrados.pop(nome)
+			print("Removido com sucesso!")
+			print("")
+		else:
+			print("Usuário não encontrado")
+			print("")
