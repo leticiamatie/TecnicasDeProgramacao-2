@@ -88,3 +88,60 @@ while systemRun == True:
 		else:
 			print("Usuário não encontrado")
 			print("")
+			
+	def alteraUsuario():
+		procurado = input("Digite o email do usuário a ser alterado: ")
+		print("")
+		res = 1
+		for nome,email in cadastrados.items():
+			emailres = str(email["email"])
+			encontrado_email = 0
+			if procurado == emailres:
+				encontrado_email = emailres
+				break
+		if encontrado_email != 0:	
+			cadastrados.pop(nome)
+			nome = input("Novo nome: ")
+			email = input("Novo E-mail: ")
+			cadastrados[nome] = {
+    		"nome": nome,
+    		"email": email
+    		}
+			print("Cadastro alterado com sucesso!")
+			print("")
+		else:
+			print("Esse usuário não existe!")
+			print("")
+
+				
+
+
+
+
+	#opção 1
+	if opcao == 1:
+		cadastraUsuario()
+	
+	#opção 2
+	if opcao == 2:
+		print("Selecione um metodo de organização:")
+		print("[1] - ordem de cadastro")
+		print("[2] - ordem alfabética")
+		tipo = int(input(""))
+
+		if tipo == 1:
+			print("Usuários ativos:")
+			print("-----------------------------")
+			exibeInscrito()
+			print("-----------------------------")
+			print("")
+			print("")
+		elif tipo == 2:
+			print("Usuários ativos:")
+			print("-----------------------------")
+			exibeAlfab()
+			print("-----------------------------")
+			print("")
+			print("")
+		else:
+			print("Opção inválida!")
