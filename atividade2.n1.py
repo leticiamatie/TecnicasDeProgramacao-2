@@ -146,9 +146,9 @@ while systemRun == True:
 			print("")
 		else:
 			print("Opção inválida!")
-
-#opção 3
-    if opcao == 3:
+			
+	#opção 3
+	if opcao == 3:
 		print("Buscar por nome:")
 		print("-----------------------------")
 		nome_procurado = input("Digite o nome a ser encontrado: ")
