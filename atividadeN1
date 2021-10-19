@@ -146,3 +146,24 @@ while systemRun == True:
 			print("")
 		else:
 			print("Opção inválida!")
+
+#opção 3
+    if opcao == 3:
+        print("Buscar por nome:")
+        print("-----------------------------")
+        nome_procurado = input("Digite o nome a ser encontrado: ")
+        encontraNome(nome_procurado)
+
+    #opção 4
+    if opcao == 4:
+        print("Excluir usuário pelo E-mail:")
+        print("-----------------------------")
+        procurado = input("Digite o E-mail do usuário: ")
+        deletaNome(procurado)
+
+
+    #opção 5
+    if opcao == 5:
+        print("Editar usuário por email:")
+        print("-----------------------------")
+        alteraUsuario()
